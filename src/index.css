@@ -1,20 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --color-heritage-green: #123D30;
-  --color-forest-green: #087A59;
-  --color-warm-ivory: #FFF9EE;
-  --color-antique-gold: #D6A84F;
-  --color-manuscript-beige: #E8D8B7;
-  --color-ink-black: #202A25;
-  --color-muted-sage: #A7B9A0;
+  --color-midnight-navy: #10182D;
+  --color-deep-heritage-green: #075E4B;
+  --color-vibrant-emerald: #00B887;
+  --color-electric-cyan: #36D6F5;
+  --color-royal-violet: #7757FF;
+  --color-rich-indigo: #302C83;
+  --color-soft-lavender: #EEE9FF;
+  --color-bright-turquoise: #48E5CF;
+  --color-warm-gold: #FFD166;
+  --color-pure-white: #FFFFFF;
+  --color-soft-cool-bg: #F3F7FC;
 }
 
 @layer base {
   body {
     font-family: 'Mukta Malar', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
-    background-color: var(--color-warm-ivory);
-    color: var(--color-ink-black);
+    background-color: var(--color-soft-cool-bg);
+    color: var(--color-midnight-navy);
     line-height: 1.6;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

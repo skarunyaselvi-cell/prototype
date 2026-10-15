@@ -89,20 +89,20 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FFF9EE] text-[#202A25] font-tamil flex flex-col selection:bg-[#D6A84F]/30 selection:text-[#123D30]">
-      {/* Background Cultural Heritage Texture (Light Theme) */}
-      <div className="fixed inset-0 z-0 opacity-10 pointer-events-none">
+    <div className="min-h-screen bg-[#10182D] text-white font-tamil flex flex-col selection:bg-[#36D6F5]/30 selection:text-white">
+      {/* Cinematic Hero Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,#10182D,#075E4B,#302C83)] opacity-90" />
         <img
-          src="/src/assets/images/tamil_culture_bg_1792063061178.jpg"
-          alt="Ancient Tamil Culture"
-          referrerPolicy="no-referrer"
-          className="w-full h-full object-cover"
+          src="/src/assets/images/hero_tamil_heritage_1792077696741.jpg"
+          alt="Tamil Heritage"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-[#FFF9EE]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#10182D]" />
       </div>
 
       {/* Top Navigation Bar */}
-      <header className="sticky top-0 z-40 bg-[#123D30] text-[#FFF9EE] border-b border-[#D6A84F]/40 shadow-md">
+      <header className="sticky top-0 z-40 bg-[#10182D]/80 backdrop-blur-lg border-b border-white/10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
           {/* Zone 1: Brand Wordmark */}
           <div className="flex items-center gap-3 shrink-0">
@@ -261,21 +261,43 @@ export default function App() {
         </div>
 
         {/* 5 Distinct Module Cards Grid (Objective 2: Reusable ModuleCard & Unique Icons) */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between text-xs font-mono font-bold uppercase tracking-wider text-[#123D30]">
+        <div className="space-y-4">
+          <div className="flex items-center justify-between text-xs font-mono font-bold uppercase tracking-wider text-white">
             <span>ஆய்வுத் தொகுதிகள் (Research Modules)</span>
-            <span className="text-stone-400 font-sans font-normal">தனித்துவமான 5 தொகுதிகள்</span>
+            <span className="text-[#36D6F5] font-sans font-normal">Premium Tamil Heritage Research</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3.5">
-            {MODULES_CONFIG.map(mod => (
-              <ModuleCard
-                key={mod.id}
-                module={mod}
-                isActive={activeTab === mod.slug}
-                onSelect={slug => setActiveTab(slug)}
-              />
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            <ModuleCard
+              module={MODULES_CONFIG[0]}
+              isActive={activeTab === 'literature'}
+              onSelect={slug => setActiveTab(slug)}
+              bgImage="/src/assets/images/tamil_literature_1792077696584.jpg"
+            />
+            <ModuleCard
+              module={MODULES_CONFIG[1]}
+              isActive={activeTab === 'script'}
+              onSelect={slug => setActiveTab(slug)}
+              bgImage="/src/assets/images/tamil_script_evolution_1792077697749.jpg"
+            />
+            <ModuleCard
+              module={MODULES_CONFIG[2]}
+              isActive={activeTab === 'ai_nanban'}
+              onSelect={slug => setActiveTab(slug)}
+              bgImage="/src/assets/images/ai_manuscript_analysis_1792077696209.jpg"
+            />
+            <ModuleCard
+              module={MODULES_CONFIG[3]}
+              isActive={activeTab === 'word_evolution'}
+              onSelect={slug => setActiveTab(slug)}
+              bgImage="/src/assets/images/tamil_word_evolution_1792077696635.jpg"
+            />
+            <ModuleCard
+              module={MODULES_CONFIG[4]}
+              isActive={activeTab === 'saved_research'}
+              onSelect={slug => setActiveTab(slug)}
+              bgImage="/src/assets/images/tamil_literature_1792077696584.jpg"
+            />
           </div>
         </div>
 
